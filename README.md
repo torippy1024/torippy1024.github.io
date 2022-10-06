@@ -2,6 +2,11 @@
 Vite + React + TypeScript の自分用テンプレート
 
 # 使い方
+* [import repository](https://github.com/new/import)で本リポジトリ(https://github.com/hiroto-toriyama/web-template)をimport
+* Actionsの設定で「Allow all actions and reusable workflows」を選択
+* Pagesの設定で「GitHub Action」「Enforce HTTPS」を選択
+* ローカルにclone
+* vite-react-tsにcheckout
 * vite.config.tsのbaseを変更
 ```typescript
 // vite.config.ts
@@ -22,6 +27,8 @@ push:
 <!-- index.html -->
 <title>Vite + React + TS</title>
 ```
+* commit & push
+* masterにpull request
 
 # 環境構築手順
 ```bash
