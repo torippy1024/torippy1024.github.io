@@ -7,7 +7,7 @@ const TopPage = () => {
       <div data-theme="light" className="flex flex-col min-h-screen">
       <Header />
       <div className="grow container mx-auto my-5">
-        TopPage
+        Coming Soon...
       </div>
       <Footer />
     </div>
