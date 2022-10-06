@@ -36,4 +36,6 @@ push:
 npm create vite@latest .  -- --template react-ts
 ```
 * GitHub Actionsのワークフローを.github/workflowsに記述
+* npm i -D autoprefixer postcss tailwindcss
+* npm i daisyui
 * src下を編集する
