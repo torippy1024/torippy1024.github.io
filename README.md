@@ -6,7 +6,7 @@ Vite + React + TypeScript + Tailwind CSS の自分用テンプレート
 * Actionsの設定で「Allow all actions and reusable workflows」を選択
 * Pagesの設定で「GitHub Action」「Enforce HTTPS」を選択
 * ローカルにclone
-* vite-react-tsにcheckout
+* vite-react-ts-tailwindにcheckout
 * vite.config.tsのbaseを変更
 ```typescript
 // vite.config.ts
@@ -36,6 +36,8 @@ push:
 npm create vite@latest .  -- --template react-ts
 ```
 * GitHub Actionsのワークフローを.github/workflowsに記述
-* npm i -D autoprefixer postcss tailwindcss
-* npm i daisyui
+* npm i -D autoprefixer postcss tailwindcss @types/react-router-dom
+* npm i daisyui react-icons react-router-dom
+* package.jsonにpostbuildとtestを追加
+* tailwindcss関係の設定ファイルを追加
 * src下を編集する
