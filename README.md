@@ -1,5 +1,5 @@
 # 概要
-Vite + React + TypeScript の自分用テンプレート
+Vite + React + TypeScript + Tailwind CSS の自分用テンプレート
 
 # 使い方
 * [import repository](https://github.com/new/import)で本リポジトリ(https://github.com/hiroto-toriyama/web-template)をimport
