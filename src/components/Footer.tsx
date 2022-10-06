@@ -1,4 +1,4 @@
-import { AiFillCalculator, AiOutlineTwitter, AiFillFacebook, AiFillYoutube } from 'react-icons/ai';
+import { AiFillCalculator, AiOutlineTwitter, AiFillFacebook, AiFillYoutube, AiFillGithub } from 'react-icons/ai';
 
 const Footer = () => {
   return (
@@ -8,9 +8,7 @@ const Footer = () => {
         <p>Copyright © 2022 - All right reserved</p>
       </div> 
       <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-        <a><AiOutlineTwitter size={24} /></a>
-        <a><AiFillYoutube size={24} /></a> 
-        <a><AiFillFacebook size={24} /></a>
+        <a href="https://github.com/torippy1024" target="_blank" rel="noopener noreferrer"><AiFillGithub size={24} /></a>
       </div>
     </footer>
   );
