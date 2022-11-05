@@ -19,6 +19,8 @@ const Wordle = () => {
     useRef<HTMLInputElement>(null),
   ];
 
+  const [history, setHistory] = useState<string[]>([]);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement>,
     setState: React.Dispatch<React.SetStateAction<string>>,
@@ -29,35 +31,63 @@ const Wordle = () => {
   };
 
   const handleClick = () => {
-    let clear = true;
-    states.map((state, index) => {
-      if (state[0] !== answer[index]) {
-        clear = false;
-      }
-      state[1]("");
-    });
-    clear ? console.log("ok") : console.log("no");
+    const input = states.map((state) => state[0]).join("");
+    (input === answer) ? console.log("ok") : console.log("no");
+    setHistory([...history, input]);
   };
 
+  const resultInput = (char: string, index: number) => {
+    const color =
+      (char === answer[index])
+      ? "bg-green-500 text-white"
+      : (answer.match(char))
+      ? "bg-yellow-500 text-white"
+      : "bg-gray-500 text-white";
+    return (
+      <input
+        type="text"
+        value={char}
+        className={`w-8 h-8 border mx-1 text-center rounded ${color}`}
+        placeholder="?"
+        key={index}
+        readOnly
+      />    
+    )
+  }
+
   return (
-    <div className="flex justify-center">
-      {states.map((state, index) =>
-        <input
-          type="text"
-          value={state[0]}
-          onChange={(e) => handleChange(e, state[1], index)}
-          className="w-12 border mx-2 text-center rounded"
-          placeholder="?"
-          key={index}
-          ref={refs[index]}
-        />  
-      )}
-      <button
-        onClick={handleClick}
-        className="btn mx-2"
-      >
-        check
-      </button>
+    <div>
+      <div className="flex items-center justify-center">
+        {states.map((state, index) =>
+          <input
+            type="text"
+            value={state[0]}
+            onChange={(e) => handleChange(e, state[1], index)}
+            className="w-8 h-8 border mx-1 text-center rounded"
+            placeholder="?"
+            key={index}
+            ref={refs[index]}
+          />  
+        )}
+        <button
+          onClick={handleClick}
+          className="btn mx-1"
+        >
+          check
+        </button>
+      </div>
+
+      <div className="flex flex-col items-center justify-center">
+        <div>
+          {history.map((str, index) =>
+            <div className="m-1" key={index}>
+              {[...str].map((char, index) =>
+                resultInput(char, index)
+              )}
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   )
 };
