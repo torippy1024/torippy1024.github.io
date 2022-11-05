@@ -4,6 +4,8 @@ import ExternalLink from "./ExternalLink";
 const Wordle = () => {
   const answer = "lucky";
 
+  const [correct, setCorrect] = useState(false);
+
   const states = [
     useState(""),
     useState(""),
@@ -37,7 +39,7 @@ const Wordle = () => {
       state[1]("");
       return char;
     }).join("");
-    (input === answer) ? console.log("ok") : console.log("no");
+    (input === answer) && setCorrect(true);
     setHistory([...history, input]);
   };
 
@@ -98,6 +100,12 @@ const Wordle = () => {
           )}
         </div>
       </div>
+
+      {correct &&
+        <div className="text-center text-xl text-green-500 font-bold">
+          {answer}
+        </div>
+      }
     </div>
   )
 };
