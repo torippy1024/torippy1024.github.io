@@ -2,6 +2,7 @@ import { useState } from "react";
 import Bar from "../components/Bar";
 import Catch from "../components/Catch";
 import Footer from "../components/Footer";
+import Framework from "../components/Framework";
 import Header from "../components/Header";
 import Introduction from "../components/Introduction";
 import Language from "../components/Language";
@@ -21,11 +22,9 @@ const TopPage = () => {
           <div className="animate-slideIn">
             <Introduction />
             <Language />
+            <Framework />
         </div>
         }
-        {/* <div className="m-2">
-          <Bar toggle={isEndCatch} rate={Math.random() * 100} />
-        </div> */}
       </div>
       <Footer />
     </div>
