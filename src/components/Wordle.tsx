@@ -103,7 +103,7 @@ const Wordle = () => {
 
       {correct &&
         <div className="text-center text-xl text-green-500 font-bold">
-          {answer}
+          {`pw{${answer}}`}
         </div>
       }
     </div>
