@@ -8,6 +8,7 @@ import Header from "../components/Header";
 import Introduction from "../components/Introduction";
 import Language from "../components/Language";
 import MouseStalker from "../components/MouseStalker";
+import Saturation from "../components/Saturation";
 
 const TopPage = () => {
   const [isEndCatch, setIsEndCatch] = useState(false);
@@ -25,6 +26,7 @@ const TopPage = () => {
             <Language />
             <Framework />
             <Award />
+            <Saturation />
         </div>
         }
       </div>
