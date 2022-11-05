@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
 
 const Wordle = () => {
+  const answer = "lucky";
+
   const states = [
     useState(""),
     useState(""),
@@ -26,6 +28,17 @@ const Wordle = () => {
     (index < refs.length-1) && refs[index+1].current?.focus();
   };
 
+  const handleClick = () => {
+    let clear = true;
+    states.map((state, index) => {
+      if (state[0] !== answer[index]) {
+        clear = false;
+      }
+      state[1]("");
+    });
+    clear ? console.log("ok") : console.log("no");
+  };
+
   return (
     <div className="flex justify-center">
       {states.map((state, index) =>
@@ -39,7 +52,12 @@ const Wordle = () => {
           ref={refs[index]}
         />  
       )}
-      <button className="btn mx-2">check</button>
+      <button
+        onClick={handleClick}
+        className="btn mx-2"
+      >
+        check
+      </button>
     </div>
   )
 };
