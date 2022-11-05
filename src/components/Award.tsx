@@ -1,4 +1,4 @@
-import { InView } from "react-intersection-observer";
+import InView from "./InView";
 
 const Award = () => {
   const awards = [
@@ -40,24 +40,26 @@ const Award = () => {
         </div>
         <div className="flex flex-col justify-center sm:justify-start">
           {awards.map((award, index) =>
-            <div className="p-2 flex flex-col items-center justify-center sm:justify-start sm:flex-row" key={index}>
-              <div className="w-16 h-16 flex-none
-                              rounded-md bg-base-content
-                              text-base-100 text-5xl font-bold
-                              flex justify-center items-center"
-                   style={{background: award.bgColor}}
-              >
-                {award.initial}
-              </div>
-              <div className="ml-2 flex flex-col text-center sm:text-start">
-                <div className="text-lg font-bold" style={{color: award.color}}>
-                  {award.title}
+            <InView minHeight={10} key={index}>
+              <div className="p-2 flex flex-col items-center justify-center sm:justify-start sm:flex-row">
+                <div className="w-16 h-16 flex-none
+                                rounded-md bg-base-content
+                                text-base-100 text-5xl font-bold
+                                flex justify-center items-center"
+                    style={{background: award.bgColor}}
+                >
+                  {award.initial}
                 </div>
-                <div>
-                  {award.text}
+                <div className="ml-2 flex flex-col text-center sm:text-start">
+                  <div className="text-lg font-bold" style={{color: award.color}}>
+                    {award.title}
+                  </div>
+                  <div>
+                    {award.text}
+                  </div>
                 </div>
               </div>
-            </div>
+            </InView>
           )}
         </div>
       </InView>
