@@ -2,6 +2,7 @@ import { useState } from "react";
 import Award from "../components/Award";
 import Bar from "../components/Bar";
 import Catch from "../components/Catch";
+import Clicker from "../components/Clicker";
 import Footer from "../components/Footer";
 import Framework from "../components/Framework";
 import Header from "../components/Header";
@@ -25,8 +26,9 @@ const TopPage = () => {
             <Introduction />
             <Language />
             <Framework />
-            <Award />
             <Saturation />
+            <Award />
+            <Clicker />
         </div>
         }
       </div>
