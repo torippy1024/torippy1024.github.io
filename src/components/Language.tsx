@@ -13,7 +13,7 @@ const Language = () => {
   ];
 
   return (
-    <div>
+    <div className="my-5">
       <InView>
         <div className="text-xl text-white text-center sm:text-left">
           Languages
