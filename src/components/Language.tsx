@@ -1,6 +1,9 @@
 import { useInView } from "react-intersection-observer";
 import "animate.css";
-import Bar from "./Bar";
+import { CircularProgressbarWithChildren } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import InView from "./InView";
+import { SiCplusplus } from "react-icons/si";
 
 const Language = () => {
   const { ref, inView } = useInView({
@@ -21,39 +24,15 @@ const Language = () => {
               Skill
             </div>
             <div className="m-2">
-              {/* <div className="my-1 flex justify-center">
-                <Bar toggle={inView2} width={100} text="C++" />
-              </div>
-              <div className="my-1 flex justify-center">
-                <Bar toggle={inView2} width={80} text="TypeScript" />
-              </div>
-              <div className="my-1 flex justify-center">
-                <Bar toggle={inView2} width={60} text="Python" />
-              </div>
-              <div className="my-1 flex justify-center">
-                <Bar toggle={inView2} width={40} text="C#" />
-              </div> */}
               <div className="flex justify-center sm:justify-start">
-                <div className="flex-cols text-end mr-2">
-                  <div>C++</div>
-                  <div>TypeScript</div>
-                  <div>Python</div>
-                  <div>C#</div>
-                </div>
-                <div>
-                  <div className="my-1">
-                    <Bar toggle={inView2} width={80} />
+                <InView>
+                  <div className="m-2">
+                    <CircularProgressbarWithChildren value={60}>
+                      <SiCplusplus size={"50%"} />
+                      <div>C++</div>
+                    </CircularProgressbarWithChildren>
                   </div>
-                  <div className="my-1">
-                    <Bar toggle={inView2} width={60} />
-                  </div>
-                  <div className="my-1">
-                    <Bar toggle={inView2} width={40} />
-                  </div>
-                  <div className="my-1">
-                    <Bar toggle={inView2} width={20} />
-                  </div>
-                </div>
+                </InView>
               </div>
             </div>
           </div>
