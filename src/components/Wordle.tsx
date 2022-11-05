@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import ExternalLink from "./ExternalLink";
 
 const Wordle = () => {
   const answer = "lucky";
@@ -75,6 +76,11 @@ const Wordle = () => {
         >
           check
         </button>
+        <ExternalLink href="https://www.nytimes.com/games/wordle/index.html">
+          <div className="w-6 h-6 rounded-full text-white bg-gray-400 text-center no-underline">
+            ?
+          </div>
+        </ExternalLink>
       </div>
 
       <div className="flex flex-col items-center justify-center">
