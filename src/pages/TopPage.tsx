@@ -6,6 +6,7 @@ import Clicker from "../components/Clicker";
 import Footer from "../components/Footer";
 import Framework from "../components/Framework";
 import Header from "../components/Header";
+import Wordle from "../components/Wordle";
 import Introduction from "../components/Introduction";
 import Language from "../components/Language";
 import MouseStalker from "../components/MouseStalker";
@@ -23,6 +24,7 @@ const TopPage = () => {
         {
           isEndCatch &&
           <div className="animate-slideIn">
+            <Wordle />
             <Introduction />
             <Language />
             <Framework />
