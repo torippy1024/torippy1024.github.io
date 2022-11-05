@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Award from "../components/Award";
 import Bar from "../components/Bar";
 import Catch from "../components/Catch";
 import Footer from "../components/Footer";
@@ -23,6 +24,7 @@ const TopPage = () => {
             <Introduction />
             <Language />
             <Framework />
+            <Award />
         </div>
         }
       </div>
