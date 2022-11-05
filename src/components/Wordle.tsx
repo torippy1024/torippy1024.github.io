@@ -32,7 +32,7 @@ const Wordle = () => {
   };
 
   const handleClick = () => {
-    const input = states.map((state) => state[0]).join("");
+    const input = states.map((state) => state[0].length ? state[0] : " ").join("");
     (input === answer) ? console.log("ok") : console.log("no");
     setHistory([...history, input]);
   };
