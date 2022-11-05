@@ -11,7 +11,7 @@ const Framework = () => {
       color: "#dd2a7b",
       list: [
         {name: "React", icon: SiReact, rate: 100},
-        {name: "Tailwind CSS", icon: SiTailwindcss, rate: 80},
+        {name: "TailwindCSS", icon: SiTailwindcss, rate: 80},
         {name: "Next.js", icon: SiNextdotjs, rate: 20},
       ],
     },

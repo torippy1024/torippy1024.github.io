@@ -18,11 +18,11 @@ const Clicker = () => {
   return (
     <div className="my-5">
       <div className="flex items-center">
-        <button className="btn" onClick={() => {setRate((rate) => Math.min(rate+3, 100))}}>
-          ？
+        <button className="btn" onClick={() => {setRate((rate) => Math.min(rate+10, 100))}}>
+          click
         </button>
         <animated.div className="h-10 ml-5 text-white bg-primary rounded-full flex justify-center items-center" style={barProps}>
-          {(rate == 100) ? "Kawaii Future Bass" : `${rate}%`}
+          {(rate == 100) ? "pw{congratulations}" : `${rate}%`}
         </animated.div>
       </div>
     </div>
