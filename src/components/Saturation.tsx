@@ -28,8 +28,8 @@ const Saturation = () => {
         <Sketch setup={setup} draw={draw} />
       </div>
       <div className="absolute top-0 w-full text-center">
-        <div className="text-base-100 font-bold text-5xl">
-          happy
+        <div className="text-base-100 font-bold text-3xl sm:text-5xl">
+          {"pw{happy}"}
         </div>
         <div>
           ?
