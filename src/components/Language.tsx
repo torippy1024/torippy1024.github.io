@@ -1,64 +1,36 @@
-import { useInView } from "react-intersection-observer";
 import "animate.css";
-import Bar from "./Bar";
+import { CircularProgressbarWithChildren } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import InView from "./InView";
+import { SiCplusplus, SiTypescript, SiPython, SiCsharp } from "react-icons/si";
 
 const Language = () => {
-  const { ref, inView } = useInView({
-    rootMargin: "-50px",
-  });
-  const temp = useInView({
-    rootMargin: "-100px",
-  });
-  const inView2 = temp.inView;
-  const ref2 = temp.ref;
+  const langs = [
+    {name: "C++", icon: SiCplusplus, rate: 100},
+    {name: "TypeScript", icon: SiTypescript, rate: 80},
+    {name: "Python", icon: SiPython, rate: 70},
+    {name: "C#", icon: SiCsharp, rate: 30},
+  ];
 
   return (
     <div>
-      <div ref={ref}>
-        {inView && (
-          <div className="animate__animated animate__fadeInUp" ref={ref2}>
-            <div className="text-xl text-white text-center sm:text-left">
-              Skill
-            </div>
-            <div className="m-2">
-              {/* <div className="my-1 flex justify-center">
-                <Bar toggle={inView2} width={100} text="C++" />
+      <InView>
+        <div className="text-xl text-white text-center sm:text-left">
+          Languages
+        </div>
+        <div className="flex flex-wrap items-center justify-center sm:justify-start sm:flex-row">
+          {langs.map((lang, index) =>
+            <InView key={index} className="p-2 w-1/2 sm:w-1/3 md:w-1/4">
+              <div>
+                <CircularProgressbarWithChildren value={lang.rate}>
+                  <lang.icon size={"40%"} />
+                  <div>{lang.name}</div>
+                </CircularProgressbarWithChildren>
               </div>
-              <div className="my-1 flex justify-center">
-                <Bar toggle={inView2} width={80} text="TypeScript" />
-              </div>
-              <div className="my-1 flex justify-center">
-                <Bar toggle={inView2} width={60} text="Python" />
-              </div>
-              <div className="my-1 flex justify-center">
-                <Bar toggle={inView2} width={40} text="C#" />
-              </div> */}
-              <div className="flex justify-center sm:justify-start">
-                <div className="flex-cols text-end mr-2">
-                  <div>C++</div>
-                  <div>TypeScript</div>
-                  <div>Python</div>
-                  <div>C#</div>
-                </div>
-                <div>
-                  <div className="my-1">
-                    <Bar toggle={inView2} width={80} />
-                  </div>
-                  <div className="my-1">
-                    <Bar toggle={inView2} width={60} />
-                  </div>
-                  <div className="my-1">
-                    <Bar toggle={inView2} width={40} />
-                  </div>
-                  <div className="my-1">
-                    <Bar toggle={inView2} width={20} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
+            </InView>
+          )}
+        </div>
+      </InView>
     </div>
   );
 };
