@@ -24,13 +24,13 @@ const TopPage = () => {
         {
           isEndCatch &&
           <div className="animate-slideIn">
-            <Wordle />
             <Introduction />
+            <Clicker />
             <Language />
             <Framework />
             <Saturation />
             <Award />
-            <Clicker />
+            <Wordle />
         </div>
         }
       </div>
