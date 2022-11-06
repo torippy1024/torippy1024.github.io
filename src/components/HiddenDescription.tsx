@@ -2,7 +2,7 @@ import Clicker from "./Clicker";
 
 const HiddenDescription = () => {
   return (
-    <div className="m-5 p-5 rounded text-green-500 font-dot bg-[url('/glitch.png')]">
+    <div className="p-5 rounded text-green-500 font-dot bg-[url('/glitch.png')]">
       <div className="font-bold text-lg">
         このwebサイトにはいくつかの隠し要素があります
       </div>
