@@ -32,11 +32,11 @@ const TopPage = () => {
             <Introduction />
             <Clicker />
             <Language />
-            <Framework />
             <Saturation />
+            <Framework />
+            <SpringCards />
             <Award />
             <Wordle />
-            <SpringCards />
         </div>
         }
       </div>
