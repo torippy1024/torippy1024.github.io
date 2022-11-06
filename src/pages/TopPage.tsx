@@ -11,6 +11,7 @@ import Introduction from "../components/Introduction";
 import Language from "../components/Language";
 import MouseStalker from "../components/MouseStalker";
 import Saturation from "../components/Saturation";
+import SpringCards from "../components/SpringCards";
 
 const TopPage = () => {
   const [isEndCatch, setIsEndCatch] = useState(false);
@@ -35,6 +36,7 @@ const TopPage = () => {
             <Saturation />
             <Award />
             <Wordle />
+            <SpringCards />
         </div>
         }
       </div>
