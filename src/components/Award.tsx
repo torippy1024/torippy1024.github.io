@@ -40,7 +40,7 @@ const Award = () => {
         </div>
         <div className="flex flex-col justify-center sm:justify-start">
           {awards.map((award, index) =>
-            <InView minHeight={10} key={index}>
+            <InView minHeight={80} key={index}>
               <div className="p-2 flex flex-col items-center justify-center sm:justify-start sm:flex-row">
                 <div className="w-16 h-16 flex-none
                                 rounded-md bg-base-content
