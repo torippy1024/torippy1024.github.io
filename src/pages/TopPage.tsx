@@ -34,10 +34,10 @@ const TopPage = () => {
             <HiddenDescription />
             <Language />
             <Saturation />
-            <Framework />
-            <SpringCards />
+            <Framework />       
+            {isUserAgentPC() && <Wordle />}
+            {!isUserAgentPC() && <SpringCards />}
             <Award />
-            <Wordle />
         </div>
         }
       </div>
