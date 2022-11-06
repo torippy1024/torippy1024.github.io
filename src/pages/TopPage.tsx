@@ -15,9 +15,13 @@ import Saturation from "../components/Saturation";
 const TopPage = () => {
   const [isEndCatch, setIsEndCatch] = useState(false);
 
+  const isUserAgentPC = () => {
+    return navigator.userAgent.match(/iPhone|Android.+Mobile/) ? false : true;
+  }
+
   return  (
     <div data-theme="dark" className="flex flex-col min-h-screen">
-      <MouseStalker />
+      {isUserAgentPC() && <MouseStalker />}
       <Header />
       <Catch onEnd={() => {setIsEndCatch(true)}} />
       <div className="grow container mx-auto p-5 max-w-3xl">
