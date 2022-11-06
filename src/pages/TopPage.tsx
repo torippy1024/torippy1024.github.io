@@ -12,6 +12,7 @@ import Language from "../components/Language";
 import MouseStalker from "../components/MouseStalker";
 import Saturation from "../components/Saturation";
 import SpringCards from "../components/SpringCards";
+import HiddenDescription from "../components/HiddenDescription";
 
 const TopPage = () => {
   const [isEndCatch, setIsEndCatch] = useState(false);
@@ -30,7 +31,7 @@ const TopPage = () => {
           isEndCatch &&
           <div className="animate-slideIn">
             <Introduction />
-            <Clicker />
+            <HiddenDescription />
             <Language />
             <Saturation />
             <Framework />
