@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { AiOutlineDown, AiOutlineMenu } from "react-icons/ai";
+import ExternalLink from "./ExternalLink";
 
 type MenuType = {
   horizontal: boolean;
@@ -8,8 +9,7 @@ type MenuType = {
 const Header = () => {
   const Menu = ({horizontal}: MenuType) => 
     <ul className={`menu ${horizontal ? "menu-horizontal" : "bg-base-200"} p-0`}>
-      <li><Link to="/">hoge1</Link></li>
-      <li><Link to="/">hoge2</Link></li>
+      <li><ExternalLink href="https://github.com/torippy1024">GitHub</ExternalLink></li>
     </ul>;
 
   return (
